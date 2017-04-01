@@ -1,0 +1,44 @@
+{
+  "name": "locaheinz/github-pulse",
+  "description": "A command line tool for generating an organization-wide GitHub pulse.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Möller",
+      "email": "am@localheinz.com"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "require": {
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "^6.2.3",
+    "knplabs/github-api": "^2.2.0",
+    "league/flysystem": "^1.0.37",
+    "php-http/guzzle6-adapter": "^1.1.1",
+    "symfony/cache": "^3.2.6",
+    "symfony/console": "^3.2.6",
+    "symfony/property-access": "^3.2.6",
+    "symfony/property-info": "^3.2.6",
+    "symfony/serializer": "^3.2.6",
+    "symfony/stopwatch": "^3.2.6"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "0.4.4",
+    "localheinz/php-cs-fixer-config": "1.1.0",
+    "phpunit/phpunit": "^6.0.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Localheinz\\GitHub\\Pulse\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Refinery29\\GitHub\\Pulse\\Test\\": "test"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+    config:
+      rulesets: "design,cleancode,codesize,controversial,unusedcode"
+      file_extensions:
+        - php
+
+ratings:
+  paths:
+    - src/**
+    - test/**
