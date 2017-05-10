@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @link https://github.com/localheinz/github-pulse
  */
 
-namespace Localheinz\GitHub\Activity\Pulse;
+namespace Localheinz\GitHub\Pulse\Exception;
 
 interface ExceptionInterface
 {

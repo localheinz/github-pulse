@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Localheinz\GitHub\Pulse\Console;
 
 use Github\Client;
-use Localheinz\GitHub\Activity\Pulse;
+use Localheinz\GitHub\Pulse\Exception;
 use Localheinz\GitHub\Pulse\Repository;
 use Localheinz\GitHub\Pulse\Resource;
 use Symfony\Component\Console;
@@ -146,7 +146,7 @@ final class GenerateCommand extends Console\Command\Command
 
         try {
             $organization = $this->organizationRepository->find($input->getArgument('organization'));
-        } catch (Pulse\ResourceNotFoundException $exception) {
+        } catch (Exception\ResourceNotFoundException $exception) {
             $io->error(\sprintf(
                 'Organization "%s" could not be found',
                 $input->getArgument('organization')
