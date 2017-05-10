@@ -17,12 +17,19 @@ interface EventRecorderInterface
 {
     public function record(EventInterface ...$events): void;
 
+    public function isSorted(): bool;
+
+    public function sort(): void;
+
+    /**
+     * @return EventInterface[]
+     */
+    public function toArray(): array;
+
     /**
      * @param \Closure $filter
      *
      * @return EventInterface[]
      */
     public function filter(\Closure $filter): array;
-
-    public function sort(): void;
 }

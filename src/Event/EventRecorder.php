@@ -18,19 +18,24 @@ final class EventRecorder implements EventRecorderInterface
     /**
      * @var EventInterface[]
      */
-    private $events;
+    private $events = [];
 
-    private $isSorted = false;
+    private $isSorted = true;
 
     public function record(EventInterface ...$events): void
     {
-        if (\count($events)) {
+        if (\count($this->events) || 1 < \count($events)) {
             $this->isSorted = false;
         }
 
         foreach ($events as $event) {
             $this->events[] = $event;
         }
+    }
+
+    public function isSorted(): bool
+    {
+        return $this->isSorted;
     }
 
     public function sort(): void
@@ -47,6 +52,11 @@ final class EventRecorder implements EventRecorderInterface
         });
 
         $this->isSorted = true;
+    }
+
+    public function toArray(): array
+    {
+        return $this->events;
     }
 
     public function filter(\Closure $filter): array
