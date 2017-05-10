@@ -1,5 +1,5 @@
 {
-  "name": "locaheinz/github-pulse",
+  "name": "localheinz/github-pulse",
   "description": "A command line tool for generating an organization-wide GitHub pulse.",
   "type": "library",
   "license": "MIT",
