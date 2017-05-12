@@ -101,6 +101,21 @@ final class EventRecorderTest extends Framework\TestCase
         $this->assertFalse($recorder->isSorted());
     }
 
+    public function testSortDoesNotSortIfRecorderIsSorted(): void
+    {
+        $event = $this->createEventMock();
+
+        $event
+            ->expects($this->never())
+            ->method($this->anything());
+
+        $recorder = new Event\EventRecorder();
+
+        $recorder->record($event);
+
+        $recorder->sort();
+    }
+
     public function testSortSortsEventsByTime(): void
     {
         $faker = $this->getFaker();
