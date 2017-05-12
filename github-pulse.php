@@ -3,6 +3,7 @@
 
 use Github\Client;
 use League\Flysystem;
+use Localheinz\GitHub\Pulse;
 use Symfony\Component\Cache;
 use Symfony\Component\Console;
 use Symfony\Component\PropertyInfo;
@@ -44,26 +45,26 @@ $serializer = new Serializer\Serializer([
 
 $denormalizer->setSerializer($serializer);
 
-$organizationRepository = new \Localheinz\GitHub\Pulse\Repository\OrganizationRepository(
+$organizationRepository = new Pulse\Repository\OrganizationRepository(
     $client,
     $denormalizer,
     $fileSystem
 );
 
-$repositoryRepository = new \Localheinz\GitHub\Pulse\Repository\RepositoryRepository(
+$repositoryRepository = new Pulse\Repository\RepositoryRepository(
     $client,
     $denormalizer,
     $fileSystem
 );
 
-$pullRequestRepository = new \Localheinz\GitHub\Pulse\Repository\PullRequestRepository(
+$pullRequestRepository = new Pulse\Repository\PullRequestRepository(
     $client,
     $denormalizer,
     $fileSystem
 );
 
 $application->addCommands([
-    new \Localheinz\GitHub\Pulse\Console\GenerateCommand(
+    new Pulse\Console\GenerateCommand(
         $client,
         $organizationRepository,
         $repositoryRepository,
