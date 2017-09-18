@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller
+ * Copyright (c) 2017 Andreas Möller.
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -16,12 +16,12 @@ namespace Localheinz\GitHub\Pulse\Resource;
 final class PullRequest implements PullRequestInterface
 {
     /**
-     * @var int|null
+     * @var null|int
      */
     private $commits;
 
     /**
-     * @var string|null
+     * @var null|string
      */
     private $closedAt;
 
@@ -41,7 +41,7 @@ final class PullRequest implements PullRequestInterface
     private $id;
 
     /**
-     * @var string|null
+     * @var null|string
      */
     private $mergedAt;
 
