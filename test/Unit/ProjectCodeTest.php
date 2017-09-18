@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Test\Unit;
 
+use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
-use Refinery29\Test\Util\TestHelper;
 
 final class ProjectCodeTest extends Framework\TestCase
 {
-    use TestHelper;
+    use Helper;
 
     public function testProductionClassesAreAbstractOrFinal(): void
     {

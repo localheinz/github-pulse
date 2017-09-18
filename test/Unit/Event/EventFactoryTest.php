@@ -15,16 +15,19 @@ namespace Localheinz\GitHub\Pulse\Test\Unit\Event;
 
 use Localheinz\GitHub\Pulse\Event;
 use Localheinz\GitHub\Pulse\Resource;
+use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
-use Refinery29\Test\Util\TestHelper;
 
 final class EventFactoryTest extends Framework\TestCase
 {
-    use TestHelper;
+    use Helper;
 
     public function testImplementsEventFactoryInterface(): void
     {
-        $this->assertImplements(Event\EventFactoryInterface::class, Event\EventFactory::class);
+        $this->assertClassImplementsInterface(
+            Event\EventFactoryInterface::class,
+            Event\EventFactory::class
+        );
     }
 
     public function testFromPullRequestReturnsArrayWithPullRequestEvent(): void
