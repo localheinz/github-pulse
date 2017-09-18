@@ -41,7 +41,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Refinery29\\GitHub\\Pulse\\Test\\": "test"
+      "Localheinz\\GitHub\\Pulse\\Test\\": "test"
     }
   }
 }
