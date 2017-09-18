@@ -14,16 +14,19 @@ declare(strict_types=1);
 namespace Localheinz\GitHub\Pulse\Test\Unit\Event;
 
 use Localheinz\GitHub\Pulse\Event;
+use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
-use Refinery29\Test\Util\TestHelper;
 
 final class EventRecorderTest extends Framework\TestCase
 {
-    use TestHelper;
+    use Helper;
 
     public function testImplementsEventRecorderInterface(): void
     {
-        $this->assertImplements(Event\EventRecorderInterface::class, Event\EventRecorder::class);
+        $this->assertClassImplementsInterface(
+            Event\EventRecorderInterface::class,
+            Event\EventRecorder::class
+        );
     }
 
     public function testDefaults(): void
@@ -118,7 +121,7 @@ final class EventRecorderTest extends Framework\TestCase
 
     public function testSortSortsEventsByTime(): void
     {
-        $faker = $this->getFaker();
+        $faker = $this->faker();
 
         $times = \array_map(function () use ($faker) {
             return $faker->dateTime->format('Y-m-d\TH:i:s\Z');

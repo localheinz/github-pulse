@@ -14,20 +14,26 @@ declare(strict_types=1);
 namespace Localheinz\GitHub\Pulse\Test\Unit\Exception;
 
 use Localheinz\GitHub\Pulse\Exception;
+use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
-use Refinery29\Test\Util\TestHelper;
 
 final class ResourceNotFoundExceptionTest extends Framework\TestCase
 {
-    use TestHelper;
+    use Helper;
 
     public function testImplementsExceptionInterface(): void
     {
-        $this->assertImplements(Exception\ExceptionInterface::class, Exception\ResourceNotFoundException::class);
+        $this->assertClassImplementsInterface(
+            Exception\ExceptionInterface::class,
+            Exception\ResourceNotFoundException::class
+        );
     }
 
     public function testExtendsRuntimeException(): void
     {
-        $this->assertExtends(\RuntimeException::class, Exception\ResourceNotFoundException::class);
+        $this->assertClassExtends(
+            \RuntimeException::class,
+            Exception\ResourceNotFoundException::class
+        );
     }
 }
