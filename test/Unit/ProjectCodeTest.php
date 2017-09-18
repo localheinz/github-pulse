@@ -25,6 +25,15 @@ final class ProjectCodeTest extends Framework\TestCase
         $this->assertClassesAreAbstractOrFinal(__DIR__ . '/../../src');
     }
 
+    public function testProductionClassesHaveTests()
+    {
+        $this->assertClassesHaveTests(
+            __DIR__ . '/../../src',
+            'Localheinz\\GitHub\\Pulse\\',
+            'Localheinz\\GitHub\\Pulse\\Test\\Unit\\'
+        );
+    }
+
     public function testTestClassesAreAbstractOrFinal(): void
     {
         $this->assertClassesAreAbstractOrFinal(__DIR__ . '/..');
