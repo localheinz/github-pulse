@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "341c17e8e0041c628fdc956623444c61",
+    "content-hash": "f7f160bf219d2cfdbb04da89d98e2c9c",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2581,6 +2581,55 @@
             ],
             "description": "Provides a configuration factory and multiple rule sets for friendsofphp/php-cs-fixer.",
             "time": "2017-09-12T21:30:57+00:00"
+        },
+        {
+            "name": "localheinz/test-util",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localheinz/test-util.git",
+                "reference": "ce5dd5f34a8a987e722b77fb02e643e53377e7ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localheinz/test-util/zipball/ce5dd5f34a8a987e722b77fb02e643e53377e7ca",
+                "reference": "ce5dd5f34a8a987e722b77fb02e643e53377e7ca",
+                "shasum": ""
+            },
+            "require": {
+                "fzaninotto/faker": "^1.0.0",
+                "php": "^7.0",
+                "zendframework/zend-file": "^2.7.1"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "0.4.4",
+                "localheinz/php-cs-fixer-config": "~1.5.1",
+                "phpunit/phpunit": "^6.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Localheinz\\Test\\Util\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com"
+                }
+            ],
+            "description": "Provides utilities for tests.",
+            "keywords": [
+                "assertion",
+                "faker",
+                "phpunit",
+                "test"
+            ],
+            "time": "2017-09-16T16:08:32+00:00"
         },
         {
             "name": "myclabs/deep-copy",
