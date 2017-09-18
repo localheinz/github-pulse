@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller
+ * Copyright (c) 2017 Andreas Möller.
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -181,7 +181,7 @@ final class EventRecorderTest extends Framework\TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|Event\EventInterface
+     * @return Event\EventInterface|\PHPUnit_Framework_MockObject_MockObject
      */
     private function createEventMock(): Event\EventInterface
     {
@@ -191,7 +191,7 @@ final class EventRecorderTest extends Framework\TestCase
     /**
      * @param string $time
      *
-     * @return \PHPUnit_Framework_MockObject_MockObject|Event\EventInterface
+     * @return Event\EventInterface|\PHPUnit_Framework_MockObject_MockObject
      */
     private function createEventSpy(string $time): Event\EventInterface
     {
