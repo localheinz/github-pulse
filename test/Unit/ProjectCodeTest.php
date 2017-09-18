@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Test\Unit;
 
+use Localheinz\GitHub\Pulse;
 use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
@@ -30,7 +31,17 @@ final class ProjectCodeTest extends Framework\TestCase
         $this->assertClassesHaveTests(
             __DIR__ . '/../../src',
             'Localheinz\\GitHub\\Pulse\\',
-            'Localheinz\\GitHub\\Pulse\\Test\\Unit\\'
+            'Localheinz\\GitHub\\Pulse\\Test\\Unit\\',
+            [
+                Pulse\Console\GenerateCommand::class,
+                Pulse\Repository\OrganizationRepository::class,
+                Pulse\Repository\PullRequestRepository::class,
+                Pulse\Repository\RepositoryRepository::class,
+                Pulse\Resource\Organization::class,
+                Pulse\Resource\PullRequest::class,
+                Pulse\Resource\Repository::class,
+                Pulse\Resource\User::class,
+            ]
         );
     }
 
