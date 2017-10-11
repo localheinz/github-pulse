@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf49ca0efdc288164c5e4053ccd7432f",
+    "content-hash": "62ba6583076c3116a58950f18fa25815",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2484,6 +2484,49 @@
             "time": "2014-01-28T22:29:15+00:00"
         },
         {
+            "name": "localheinz/classy",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localheinz/classy.git",
+                "reference": "165395d7e62bc49cf8c8bdd6d4e452fa367dbb31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localheinz/classy/zipball/165395d7e62bc49cf8c8bdd6d4e452fa367dbb31",
+                "reference": "165395d7e62bc49cf8c8bdd6d4e452fa367dbb31",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "0.4.4",
+                "localheinz/php-cs-fixer-config": "~1.6.2",
+                "localheinz/test-util": "0.2.2",
+                "phpbench/phpbench": "0.13.0",
+                "phpunit/phpunit": "^6.4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Localheinz\\Classy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com"
+                }
+            ],
+            "description": "Provides a way to collect classy constructs from source or a directory.",
+            "time": "2017-10-10T06:43:55+00:00"
+        },
+        {
             "name": "localheinz/php-cs-fixer-config",
             "version": "1.6.2",
             "source": {
@@ -2526,27 +2569,27 @@
         },
         {
             "name": "localheinz/test-util",
-            "version": "0.2.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/localheinz/test-util.git",
-                "reference": "ce5dd5f34a8a987e722b77fb02e643e53377e7ca"
+                "reference": "9b7515305250fba79ac7351448d4327be0b10c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/localheinz/test-util/zipball/ce5dd5f34a8a987e722b77fb02e643e53377e7ca",
-                "reference": "ce5dd5f34a8a987e722b77fb02e643e53377e7ca",
+                "url": "https://api.github.com/repos/localheinz/test-util/zipball/9b7515305250fba79ac7351448d4327be0b10c11",
+                "reference": "9b7515305250fba79ac7351448d4327be0b10c11",
                 "shasum": ""
             },
             "require": {
-                "fzaninotto/faker": "^1.0.0",
-                "php": "^7.0",
-                "zendframework/zend-file": "^2.7.1"
+                "fzaninotto/faker": "^1.7.1",
+                "localheinz/classy": "0.2.0",
+                "php": "^7.0"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "0.4.4",
-                "localheinz/php-cs-fixer-config": "~1.5.1",
-                "phpunit/phpunit": "^6.2.4"
+                "localheinz/php-cs-fixer-config": "~1.6.2",
+                "phpunit/phpunit": "^6.3.1"
             },
             "type": "library",
             "autoload": {
@@ -2571,7 +2614,7 @@
                 "phpunit",
                 "test"
             ],
-            "time": "2017-09-16T16:08:32+00:00"
+            "time": "2017-10-10T06:54:57+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4361,108 +4404,6 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2017-04-07T12:08:54+00:00"
-        },
-        {
-            "name": "zendframework/zend-file",
-            "version": "2.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-file.git",
-                "reference": "888fd4852432ee61ffd48a66b6812387b4f83c02"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-file/zipball/888fd4852432ee61ffd48a66b6812387b4f83c02",
-                "reference": "888fd4852432ee61ffd48a66b6812387b4f83c02",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5 || ^7.0",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-filter": "^2.6.1",
-                "zendframework/zend-i18n": "^2.6",
-                "zendframework/zend-progressbar": "^2.5.2",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-session": "^2.6.2",
-                "zendframework/zend-validator": "^2.6"
-            },
-            "suggest": {
-                "zendframework/zend-filter": "Zend\\Filter component",
-                "zendframework/zend-i18n": "Zend\\I18n component",
-                "zendframework/zend-validator": "Zend\\Validator component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev",
-                    "dev-develop": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\File\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zend-file",
-            "keywords": [
-                "file",
-                "zf2"
-            ],
-            "time": "2017-01-11T17:07:45+00:00"
-        },
-        {
-            "name": "zendframework/zend-stdlib",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "debedcfc373a293f9250cc9aa03cf121428c8e78"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/debedcfc373a293f9250cc9aa03cf121428c8e78",
-                "reference": "debedcfc373a293f9250cc9aa03cf121428c8e78",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0"
-            },
-            "require-dev": {
-                "athletic/athletic": "~0.1",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "^2.6.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev",
-                    "dev-develop": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Stdlib\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zend-stdlib",
-            "keywords": [
-                "stdlib",
-                "zf2"
-            ],
-            "time": "2016-09-13T14:38:50+00:00"
         }
     ],
     "aliases": [],
