@@ -10,7 +10,11 @@ env:
 matrix:
   include:
     - php: 7.1
-      env: WITH_CS=true WITH_COVERAGE=true
+      env: WITH_LOWEST=true
+    - php: 7.1
+      env: WITH_LOCKED=true WITH_CS=true WITH_COVERAGE=true
+    - php: 7.1
+      env: WITH_HIGHEST=true
 
 cache:
   directories:
@@ -24,11 +28,12 @@ before_install:
   - if [[ -n "$GITHUB_TOKEN" ]]; then composer config github-oauth.github.com $GITHUB_TOKEN; fi
 
 install:
-  - composer install
+  - if [[ "$WITH_LOWEST" == "true" ]]; then composer update --prefer-lowest; fi
+  - if [[ "$WITH_LOCKED" == "true" ]]; then composer install; fi
+  - if [[ "$WITH_HIGHEST" == "true" ]]; then composer update; fi
 
 before_script:
-  - mkdir -p "$HOME/.php-cs-fixer"
-  - mkdir -p build/logs
+  - mkdir -p $HOME/.php-cs-fixer
 
 script:
   - if [[ "$WITH_CS" == "true" ]]; then vendor/bin/php-cs-fixer fix --config=.php_cs --diff --dry-run --verbose; fi
