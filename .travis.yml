@@ -5,7 +5,6 @@ sudo: false
 env:
   global:
     - secure: "KweMQTKxyFjyuNeDowi4vqQi0PzFgv9RbxFzVjQIeMgHIOAQAFMPWLpc02bqSLpSTq0FRp9jxQkFx0rjPy0xjR4MhYMppd6MBKaI4v15B9FI5H2R/vOIrptCn6dVqbXJ6zvgE/O4pCybpYFuygBUQIff69SEEjQtXGnpaQ0yNg+8eXQFsL88i0tbMmQoLVOsxAAN0Qf+6uM+9ArpzICPdDNRNZbOEovQ4p5LNiMl8jpoxKAIgH7KcTOKH2PCxx8EPXIeK3CSEB4LzeGoIWpg4An7V8i6CU5AvT9orotVY7nvVU09ht15rKQj0IjY0CpI8NsrZvBp3CAPhopvjnt0enxnYFMDsooRCW9+xa3no6eY2MjkgQxJQuEjKbuSSDHEb0B9LNwyiexDOGJ+XnArXYBeWBcENTPR8UFF1VpFoYyfaTpwdQW80Yhno3JJeIU17vbmBuM4YG0x1h0NFjf6sAU16u8O3CqOeG1khexGQS4UT6cz2NRcAr2LamHry4Lo3YJcAw5x8rG3f3n/KVnANVn+AWOPS+d+I3N1+Jw/b/essY6bVMTAmc6rqPaFxLu3irNbx/5CPx8WNOCFmmLLhccxrd/R8mdpG2NEEoo4f4Mei23UPLqhsea03qFSV4DLQy+Ix5+0mphr9ZqgmRSxub+CFpKnfA3zMsozvkfBM8o="
-    - secure: "HYCt5BmIgwaxm+H84Foi49vsBxu/ZN6cdzwpCT76b8r0czCWBLQjzrwKiAmkhumg8kRG3pERbKBo53djHvrEyZ0VSmvm4SJFw+GVzNobAt5JCbbrc/ifwGBrFc5QC9z4jDx0VMZ/zIBaVwLFPlGAfIjHJ6DS4/xYUf80us7JgcTp3okXcAPPpznsQ2LdMMMU8qGARYX9tpjYeq0Zjhpz2qVV0DB+EnIM0/lOuZI6jQjSi1PKF7D5qSThekmmxSZ3gUcLfQ0tx51ELcZ8ZelO1HzYni6zGknjQselCTuAKjWCxChJmaC1gSS3zAK9519OJE1eLVLxGxbmoeDcQXA3KbhbWCx/BSRgSfuooAqlQuOoz5oYCA4FXpgsudNQ24xrSu9IAUytXowF1th3XhHdAQ/soAbQgPC+AA5qvuBxMJAYyJ9Xgpu2EUcddbZlM/CR6IwYRLof/EXoReFwVtumSSwpn9YVXckd4lT9QurNdUIn014O2do5DWs+Ghj71XCtDlAvUYqNP8KlnjQtuEW9WxZubgsZ/egu5kKHhvcfKNjnMozaDNcs0vmHvQSof99k5FJtIq4sAWnLLSYQqGkq4Jl6JqTT4AZFmR5toNDjPRT7sXdz3Ygnu8NPEZUU9BtwDvcklYCijkecYclGrFNHK709Eg5IRl6M09y4NZp0aAA="
 
 matrix:
   include:
@@ -38,7 +37,7 @@ script:
   - vendor/bin/phpunit --configuration=test/Integration/phpunit.xml
 
 after_success:
-  - if [[ "$WITH_COVERAGE" == "true" && -n "$CODECLIMATE_REPO_TOKEN" ]]; then vendor/bin/test-reporter --coverage-report=build/logs/clover.xml; fi
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then bash <(curl -s https://codecov.io/bash); fi
 
 notifications:
   email: false
