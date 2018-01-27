@@ -2,6 +2,7 @@
   "name": "localheinz/github-pulse",
   "type": "library",
   "description": "Provides a command line tool for generating an organization-wide GitHub pulse.",
+  "homepage": "https://github.com/localheinz/github-pulse",
   "license": "MIT",
   "authors": [
     {
@@ -41,5 +42,9 @@
     "psr-4": {
       "Localheinz\\GitHub\\Pulse\\Test\\": "test"
     }
+  },
+  "support": {
+    "issues": "https://github.com/localheinz/github-pulse/issues",
+    "source": "https://github.com/localheinz/github-pulse"
   }
 }
