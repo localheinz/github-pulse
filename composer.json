@@ -43,11 +43,11 @@
       "Localheinz\\GitHub\\Pulse\\Test\\": "test"
     }
   },
+  "bin": [
+    "github-pulse"
+  ],
   "support": {
     "issues": "https://github.com/localheinz/github-pulse/issues",
     "source": "https://github.com/localheinz/github-pulse"
-  },
-  "bin": [
-    "github-pulse"
-  ]
+  }
 }
