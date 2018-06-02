@@ -17,6 +17,9 @@ use Localheinz\GitHub\Pulse\Exception;
 use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
+/**
+ * @internal
+ */
 final class ResourceNotFoundExceptionTest extends Framework\TestCase
 {
     use Helper;
