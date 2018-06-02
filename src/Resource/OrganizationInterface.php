@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Localheinz\GitHub\Pulse\Resource;
 
 /**
- * @link https://developer.github.com/v3/orgs/#list-your-organizations
+ * @see https://developer.github.com/v3/orgs/#list-your-organizations
  */
 interface OrganizationInterface
 {

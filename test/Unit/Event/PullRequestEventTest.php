@@ -18,6 +18,9 @@ use Localheinz\GitHub\Pulse\Resource;
 use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
+/**
+ * @internal
+ */
 final class PullRequestEventTest extends Framework\TestCase
 {
     use Helper;

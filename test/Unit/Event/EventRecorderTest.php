@@ -17,6 +17,9 @@ use Localheinz\GitHub\Pulse\Event;
 use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
+/**
+ * @internal
+ */
 final class EventRecorderTest extends Framework\TestCase
 {
     use Helper;

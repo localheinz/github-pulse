@@ -226,14 +226,14 @@ final class GenerateCommand extends Console\Command\Command
                     ];
                 }
 
-                $allPullRequests[$user]['pullRequests'] += 1;
+                ++$allPullRequests[$user]['pullRequests'];
                 $allPullRequests[$user]['commits'] += $pullRequest->commits();
 
-                if ($allPullRequests[$user]['firstPullRequest'] > $pullRequest->createdAt()) {
+                if ($pullRequest->createdAt() < $allPullRequests[$user]['firstPullRequest']) {
                     $allPullRequests[$user]['firstPullRequest'] = $pullRequest->createdAt();
                 }
 
-                if ($allPullRequests[$user]['lastPullRequest'] < $pullRequest->createdAt()) {
+                if ($pullRequest->createdAt() > $allPullRequests[$user]['lastPullRequest']) {
                     $allPullRequests[$user]['lastPullRequest'] = $pullRequest->createdAt();
                 }
             });

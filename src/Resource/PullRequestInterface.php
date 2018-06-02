@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Localheinz\GitHub\Pulse\Resource;
 
 /**
- * @link https://developer.github.com/v3/pulls/#list-pull-requests
+ * @see https://developer.github.com/v3/pulls/#list-pull-requests
  */
 interface PullRequestInterface
 {
