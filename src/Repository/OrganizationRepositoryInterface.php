@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Repository;
 
-use Localheinz\GitHub\Activity\Pulse;
+use Localheinz\GitHub\Pulse\Exception;
 use Localheinz\GitHub\Pulse\Resource;
 
 interface OrganizationRepositoryInterface
@@ -21,7 +21,7 @@ interface OrganizationRepositoryInterface
     /**
      * @param string $name
      *
-     * @throws Pulse\ResourceNotFoundException
+     * @throws Exception\ResourceNotFoundException
      * @throws \InvalidArgumentException
      *
      * @return Resource\OrganizationInterface
