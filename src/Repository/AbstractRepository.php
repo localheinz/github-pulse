@@ -54,8 +54,14 @@ abstract class AbstractRepository
             return [];
         }
 
+        $content = $this->filesystem->read($path);
+
+        if (false === $content) {
+            return [];
+        }
+
         $data = \json_decode(
-            $this->filesystem->read($path),
+            $content,
             true
         );
 
@@ -74,12 +80,18 @@ abstract class AbstractRepository
             $this->filesystem->delete($path);
         }
 
+        $content = \json_encode(
+            $data,
+            \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES
+        );
+
+        if (false === $content) {
+            return;
+        }
+
         $this->filesystem->write(
             $path,
-            \json_encode(
-                $data,
-                \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES
-            )
+            $content
         );
     }
 
