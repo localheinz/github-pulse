@@ -126,7 +126,7 @@ final class PullRequestRepository extends AbstractRepository implements PullRequ
         return $this->client()->pullRequest()->show(
             $organization->login(),
             $repository->name(),
-            $id
+            (string) $id
         );
     }
 
