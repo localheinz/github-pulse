@@ -201,7 +201,7 @@ final class GenerateCommand extends Console\Command\Command
                 $repository
             );
 
-            \array_walk($pullRequests, function (Resource\PullRequestInterface $pullRequest) use ($io, $organization, $repository, $startTime, $endTime, &$allPullRequests) {
+            \array_walk($pullRequests, function (Resource\PullRequestInterface $pullRequest) use ($organization, $repository, $startTime, $endTime, &$allPullRequests) {
                 $pullRequest = $this->pullRequestRepository->find(
                     $organization,
                     $repository,
