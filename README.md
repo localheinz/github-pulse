@@ -1,6 +1,6 @@
 # github-pulse
 
-[![Build Status](https://travis-ci.org/localheinz/github-pulse.svg?branch=master)](https://travis-ci.org/localheinz/github-pulse)
+[![Build Status](https://travis-ci.com/localheinz/github-pulse.svg?branch=master)](https://travis-ci.com/localheinz/github-pulse)
 [![codecov](https://codecov.io/gh/localheinz/github-pulse/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/github-pulse)
 [![Latest Stable Version](https://poser.pugx.org/localheinz/github-pulse/v/stable)](https://packagist.org/packages/localheinz/github-pulse)
 [![Total Downloads](https://poser.pugx.org/localheinz/github-pulse/downloads)](https://packagist.org/packages/localheinz/github-pulse)
