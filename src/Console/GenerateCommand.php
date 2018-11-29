@@ -121,13 +121,19 @@ final class GenerateCommand extends Console\Command\Command
 
         $io->newLine();
 
+        /** @var string $organizationName */
+        $organizationName = $input->getArgument('organization');
+
+        /** @var string $startTime */
         $startTime = $input->getOption('start-time');
+
+        /** @var string $endTime */
         $endTime = $input->getOption('end-time');
 
         $io->listing([
             \sprintf(
                 'in organization "%s"',
-                $input->getArgument('organization')
+                $organizationName
             ),
             \sprintf(
                 'between "%s" and "%s"',
@@ -136,6 +142,7 @@ final class GenerateCommand extends Console\Command\Command
             ),
         ]);
 
+        /** @var string $authToken */
         $authToken = $input->getOption('auth-token');
 
         if (null !== $authToken) {
@@ -146,11 +153,11 @@ final class GenerateCommand extends Console\Command\Command
         }
 
         try {
-            $organization = $this->organizationRepository->find($input->getArgument('organization'));
+            $organization = $this->organizationRepository->find($organizationName);
         } catch (Exception\ResourceNotFoundException $exception) {
             $io->error(\sprintf(
                 'Organization "%s" could not be found',
-                $input->getArgument('organization')
+                $organizationName
             ));
 
             return 1;
