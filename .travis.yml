@@ -68,6 +68,7 @@ jobs:
         - if [[ -n "$GITHUB_TOKEN" ]]; then composer config github-oauth.github.com $GITHUB_TOKEN; fi
 
       install:
+        - if [[ "$TRAVIS_PHP_VERSION" == "7.3" ]]; then composer remove --dev localheinz/php-cs-fixer-config; fi
         - composer install
 
       script:
@@ -106,6 +107,24 @@ jobs:
     - <<: *TEST
 
       php: 7.2
+
+      env: WITH_HIGHEST=true
+
+    - <<: *TEST
+
+      php: 7.3
+
+      env: WITH_LOWEST=true
+
+    - <<: *TEST
+
+      php: 7.3
+
+      env: WITH_LOCKED=true
+
+    - <<: *TEST
+
+      php: 7.3
 
       env: WITH_HIGHEST=true
 
