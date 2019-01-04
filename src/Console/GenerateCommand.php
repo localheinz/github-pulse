@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller.
+ * Copyright (c) 2017 Andreas Möller
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -70,7 +70,7 @@ final class GenerateCommand extends Console\Command\Command
         $this->dateTimeZone = $dateTimeZone ?: new \DateTimeZone('UTC');
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $startTime = new \DateTimeImmutable('1970-01-01 00:00:00', $this->dateTimeZone);
         $endTime = new \DateTimeImmutable('now', $this->dateTimeZone);
@@ -179,7 +179,7 @@ final class GenerateCommand extends Console\Command\Command
             return 1;
         }
 
-        $io->listing(\array_map(function (Resource\RepositoryInterface $repository) {
+        $io->listing(\array_map(static function (Resource\RepositoryInterface $repository) {
             return $repository->name();
         }, $repositories));
 
@@ -197,7 +197,7 @@ final class GenerateCommand extends Console\Command\Command
 
         $allPullRequests = [];
 
-        \array_walk($repositories, function (Resource\RepositoryInterface $repository) use ($io, $organization, $startTime, $endTime, &$allPullRequests) {
+        \array_walk($repositories, function (Resource\RepositoryInterface $repository) use ($io, $organization, $startTime, $endTime, &$allPullRequests): void {
             $io->write(\sprintf(
                 ' * %s ',
                 $repository->name()
@@ -208,7 +208,7 @@ final class GenerateCommand extends Console\Command\Command
                 $repository
             );
 
-            \array_walk($pullRequests, function (Resource\PullRequestInterface $pullRequest) use ($organization, $repository, $startTime, $endTime, &$allPullRequests) {
+            \array_walk($pullRequests, function (Resource\PullRequestInterface $pullRequest) use ($organization, $repository, $startTime, $endTime, &$allPullRequests): void {
                 $pullRequest = $this->pullRequestRepository->find(
                     $organization,
                     $repository,
@@ -260,7 +260,7 @@ final class GenerateCommand extends Console\Command\Command
             $endTime
         ));
 
-        \uksort($allPullRequests, function ($a, $b) use ($allPullRequests) {
+        \uksort($allPullRequests, static function ($a, $b) use ($allPullRequests) {
             return $allPullRequests[$b]['commits'] <=> $allPullRequests[$a]['commits'];
         });
 
@@ -273,7 +273,7 @@ final class GenerateCommand extends Console\Command\Command
                 'First PR',
                 'Last PR',
             ],
-            \array_map(function ($user, $data) {
+            \array_map(static function ($user, $data) {
                 static $row;
 
                 if (null === $row) {

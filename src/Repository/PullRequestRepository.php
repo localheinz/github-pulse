@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller.
+ * Copyright (c) 2017 Andreas Möller
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -93,7 +93,7 @@ final class PullRequestRepository extends AbstractRepository implements PullRequ
             return $this->denormalize($data);
         }, $collectionData);
 
-        \usort($pullRequests, function (Resource\PullRequestInterface $a, Resource\PullRequestInterface $b) {
+        \usort($pullRequests, static function (Resource\PullRequestInterface $a, Resource\PullRequestInterface $b) {
             return $a->number() <=> $b->number();
         });
 
