@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller.
+ * Copyright (c) 2017 Andreas Möller
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -36,9 +36,9 @@ final class EventRecorderTest extends Framework\TestCase
     {
         $recorder = new Event\EventRecorder();
 
-        $this->assertTrue($recorder->isSorted());
-        $this->assertInternalType('array', $recorder->toArray());
-        $this->assertEmpty($recorder->toArray());
+        self::assertTrue($recorder->isSorted());
+        self::assertInternalType('array', $recorder->toArray());
+        self::assertEmpty($recorder->toArray());
     }
 
     public function testRecordRecordsEvent(): void
@@ -49,9 +49,9 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->record($event);
 
-        $this->assertInternalType('array', $recorder->toArray());
-        $this->assertCount(1, $recorder->toArray());
-        $this->assertContains($event, $recorder->toArray());
+        self::assertInternalType('array', $recorder->toArray());
+        self::assertCount(1, $recorder->toArray());
+        self::assertContains($event, $recorder->toArray());
     }
 
     public function testRecordRecordsEvents(): void
@@ -66,7 +66,7 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->record(...$events);
 
-        $this->assertSame(\array_values($events), $recorder->toArray());
+        self::assertSame(\array_values($events), $recorder->toArray());
     }
 
     public function testRecordEventOnEmptyRecorderRecorderSorted(): void
@@ -77,7 +77,7 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->record($event);
 
-        $this->assertTrue($recorder->isSorted());
+        self::assertTrue($recorder->isSorted());
     }
 
     public function testRecordEventOnRecorderWithEventMarksRecorderUnsorted(): void
@@ -89,7 +89,7 @@ final class EventRecorderTest extends Framework\TestCase
         $recorder->record($event);
         $recorder->record($event);
 
-        $this->assertFalse($recorder->isSorted());
+        self::assertFalse($recorder->isSorted());
     }
 
     public function testRecordEventsOnEmptyRecorderMarksRecorderUnsorted(): void
@@ -104,7 +104,7 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->record(...$events);
 
-        $this->assertFalse($recorder->isSorted());
+        self::assertFalse($recorder->isSorted());
     }
 
     public function testSortDoesNotSortIfRecorderIsSorted(): void
@@ -112,8 +112,8 @@ final class EventRecorderTest extends Framework\TestCase
         $event = $this->createEventMock();
 
         $event
-            ->expects($this->never())
-            ->method($this->anything());
+            ->expects(self::never())
+            ->method(self::anything());
 
         $recorder = new Event\EventRecorder();
 
@@ -126,7 +126,7 @@ final class EventRecorderTest extends Framework\TestCase
     {
         $faker = $this->faker();
 
-        $times = \array_map(function () use ($faker) {
+        $times = \array_map(static function () use ($faker) {
             return $faker->dateTime->format('Y-m-d\TH:i:s\Z');
         }, \array_fill(0, 5, null));
 
@@ -147,19 +147,19 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->sort();
 
-        $this->assertSame(\array_values($sorted), $recorder->toArray());
+        self::assertSame(\array_values($sorted), $recorder->toArray());
     }
 
     public function testFilterIfNoEventsHaveBeenRecorded(): void
     {
         $recorder = new Event\EventRecorder();
 
-        $filtered = $recorder->filter(function () {
+        $filtered = $recorder->filter(static function () {
             return true;
         });
 
-        $this->assertInternalType('array', $filtered);
-        $this->assertEmpty($filtered);
+        self::assertInternalType('array', $filtered);
+        self::assertEmpty($filtered);
     }
 
     public function testFilterFiltersEvents(): void
@@ -177,13 +177,13 @@ final class EventRecorderTest extends Framework\TestCase
         $recorder->record($pastEvent);
         $recorder->record($futureEvent);
 
-        $filtered = $recorder->filter(function (Event\EventInterface $event) use ($now) {
+        $filtered = $recorder->filter(static function (Event\EventInterface $event) use ($now) {
             return $event->time() <= $now->format('Y-m-d\TH:i:s\Z');
         });
 
-        $this->assertInternalType('array', $filtered);
-        $this->assertCount(1, $filtered);
-        $this->assertContains($pastEvent, $filtered);
+        self::assertInternalType('array', $filtered);
+        self::assertCount(1, $filtered);
+        self::assertContains($pastEvent, $filtered);
     }
 
     /**
@@ -204,7 +204,7 @@ final class EventRecorderTest extends Framework\TestCase
         $event = $this->createEventMock();
 
         $event
-            ->expects($this->atLeastOnce())
+            ->expects(self::atLeastOnce())
             ->method('time')
             ->willReturn($time);
 

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller.
+ * Copyright (c) 2017 Andreas Möller
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -39,7 +39,7 @@ final class PullRequestEventTest extends Framework\TestCase
 
         $event = new Event\PullRequestEvent($pullRequest);
 
-        $this->assertSame($pullRequest, $event->pullRequest());
+        self::assertSame($pullRequest, $event->pullRequest());
     }
 
     public function testTimeReturnsTimeWhenPullRequestWasCreated(): void
@@ -49,13 +49,13 @@ final class PullRequestEventTest extends Framework\TestCase
         $pullRequest = $this->createPullRequestMock();
 
         $pullRequest
-            ->expects($this->once())
+            ->expects(self::once())
             ->method('createdAt')
             ->willReturn($createdAt);
 
         $event = new Event\PullRequestEvent($pullRequest);
 
-        $this->assertSame($createdAt, $event->time());
+        self::assertSame($createdAt, $event->time());
     }
 
     /**

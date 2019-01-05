@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller.
+ * Copyright (c) 2017 Andreas Möller
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -62,7 +62,7 @@ final class RepositoryRepository extends AbstractRepository implements Repositor
             return $this->denormalize($data);
         }, $collectionData);
 
-        \usort($repositories, function (Resource\RepositoryInterface $a, Resource\RepositoryInterface $b) {
+        \usort($repositories, static function (Resource\RepositoryInterface $a, Resource\RepositoryInterface $b) {
             return \strcmp(
                 $a->name(),
                 $b->name()

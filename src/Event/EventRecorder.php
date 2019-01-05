@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2017 Andreas Möller.
+ * Copyright (c) 2017 Andreas Möller
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -44,7 +44,7 @@ final class EventRecorder implements EventRecorderInterface
             return;
         }
 
-        \usort($this->events, function (EventInterface $a, EventInterface $b) {
+        \usort($this->events, static function (EventInterface $a, EventInterface $b) {
             return \strcmp(
                 $a->time(),
                 $b->time()
