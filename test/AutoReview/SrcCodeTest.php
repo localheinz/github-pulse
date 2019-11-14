@@ -8,10 +8,10 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
-namespace Localheinz\GitHub\Pulse\Test\Unit;
+namespace Localheinz\GitHub\Pulse\Test\AutoReview;
 
 use Localheinz\GitHub\Pulse;
 use Localheinz\Test\Util\Helper;
@@ -19,17 +19,14 @@ use PHPUnit\Framework;
 
 /**
  * @internal
+ *
+ * @coversNothing
  */
-final class ProjectCodeTest extends Framework\TestCase
+final class SrcCodeTest extends Framework\TestCase
 {
     use Helper;
 
-    public function testProductionClassesAreAbstractOrFinal(): void
-    {
-        $this->assertClassesAreAbstractOrFinal(__DIR__ . '/../../src');
-    }
-
-    public function testProductionClassesHaveTests(): void
+    public function testSrcClassesHaveUnitTests(): void
     {
         $this->assertClassesHaveTests(
             __DIR__ . '/../../src',
@@ -46,10 +43,5 @@ final class ProjectCodeTest extends Framework\TestCase
                 Pulse\Resource\User::class,
             ]
         );
-    }
-
-    public function testTestClassesAreAbstractOrFinal(): void
-    {
-        $this->assertClassesAreAbstractOrFinal(__DIR__ . '/..');
     }
 }

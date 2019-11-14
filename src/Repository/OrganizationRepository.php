@@ -8,7 +8,7 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
 namespace Localheinz\GitHub\Pulse\Repository;
@@ -23,7 +23,7 @@ final class OrganizationRepository extends AbstractRepository implements Organiz
 
         $data = $this->fromFile($path);
 
-        if (empty($data)) {
+        if ([] === $data) {
             $data = $this->resourceFromApi($name);
         }
 

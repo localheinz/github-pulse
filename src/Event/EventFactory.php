@@ -8,7 +8,7 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
 namespace Localheinz\GitHub\Pulse\Event;
@@ -19,12 +19,8 @@ final class EventFactory implements EventFactoryInterface
 {
     public function fromPullRequest(Resource\PullRequestInterface $pullRequest): array
     {
-        $events = [];
-
-        if (null !== $pullRequest->createdAt()) {
-            $events[] = new PullRequestEvent($pullRequest);
-        }
-
-        return $events;
+        return [
+            new PullRequestEvent($pullRequest),
+        ];
     }
 }

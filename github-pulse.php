@@ -8,7 +8,7 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
 use Github\Client;
@@ -18,6 +18,7 @@ use Symfony\Component\Cache;
 use Symfony\Component\Console;
 use Symfony\Component\PropertyInfo;
 use Symfony\Component\Serializer;
+use Symfony\Component\Stopwatch;
 
 $autoloaders = [
     __DIR__ . '/../../../vendor/autoload.php',
@@ -79,7 +80,9 @@ $application->addCommands([
         $client,
         $organizationRepository,
         $repositoryRepository,
-        $pullRequestRepository
+        $pullRequestRepository,
+        new Stopwatch\Stopwatch(),
+        new DateTimeZone('UTC')
     ),
 ]);
 

@@ -1,30 +1,27 @@
 # github-pulse
 
-[![Build Status](https://travis-ci.com/localheinz/github-pulse.svg?branch=master)](https://travis-ci.com/localheinz/github-pulse)
+[![CI Status](https://github.com/localheinz/github-pulse/workflows/Continuous%20Integration/badge.svg)](https://github.com/localheinz/github-pulse/actions)
 [![codecov](https://codecov.io/gh/localheinz/github-pulse/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/github-pulse)
 [![Latest Stable Version](https://poser.pugx.org/localheinz/github-pulse/v/stable)](https://packagist.org/packages/localheinz/github-pulse)
 [![Total Downloads](https://poser.pugx.org/localheinz/github-pulse/downloads)](https://packagist.org/packages/localheinz/github-pulse)
 
-Provides a command line tool for generating an organization-wide GitHub pulse.
+## Installation
+
+:bulb: This is a great place for showing how to install the package, see below:
+
+Run
+
+```
+$ composer require localheinz/github-pulse
+```
 
 ## Usage
 
-Install globally:
+:bulb: This is a great place for showing a few usage examples!
 
-```bash
-$ composer global require localheinz/github-pulse
-```
+## Changelog
 
-Create your pulse anywhere:
-
-```bash
-$ github-pulse generate localheinz
-```
-
-Enjoy the pulse:
-
-```
-```
+Please have a look at [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Contributing
 
@@ -32,10 +29,8 @@ Please have a look at [`CONTRIBUTING.md`](.github/CONTRIBUTING.md).
 
 ## Code of Conduct
 
-Please have a look at [`CONDUCT.md`](.github/CODE_OF_CONDUCT.md).
+Please have a look at [`CODE_OF_CONDUCT.md`](.github/CODE_OF_CONDUCT.md).
 
 ## License
 
 This package is licensed using the MIT License.
-
-
