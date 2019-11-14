@@ -8,7 +8,7 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
 namespace Localheinz\GitHub\Pulse\Test\Unit\Event;
@@ -19,6 +19,8 @@ use PHPUnit\Framework;
 
 /**
  * @internal
+ *
+ * @covers \Localheinz\GitHub\Pulse\Event\EventRecorder
  */
 final class EventRecorderTest extends Framework\TestCase
 {
@@ -37,7 +39,6 @@ final class EventRecorderTest extends Framework\TestCase
         $recorder = new Event\EventRecorder();
 
         self::assertTrue($recorder->isSorted());
-        self::assertInternalType('array', $recorder->toArray());
         self::assertEmpty($recorder->toArray());
     }
 
@@ -49,7 +50,6 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->record($event);
 
-        self::assertInternalType('array', $recorder->toArray());
         self::assertCount(1, $recorder->toArray());
         self::assertContains($event, $recorder->toArray());
     }
@@ -138,6 +138,7 @@ final class EventRecorderTest extends Framework\TestCase
 
         $recorder->record(...$events);
 
+        /** @var array $sorted */
         $sorted = \array_combine(
             $times,
             $events
@@ -158,7 +159,6 @@ final class EventRecorderTest extends Framework\TestCase
             return true;
         });
 
-        self::assertInternalType('array', $filtered);
         self::assertEmpty($filtered);
     }
 
@@ -181,7 +181,6 @@ final class EventRecorderTest extends Framework\TestCase
             return $event->time() <= $now->format('Y-m-d\TH:i:s\Z');
         });
 
-        self::assertInternalType('array', $filtered);
         self::assertCount(1, $filtered);
         self::assertContains($pastEvent, $filtered);
     }

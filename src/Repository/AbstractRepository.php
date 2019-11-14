@@ -8,7 +8,7 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
 namespace Localheinz\GitHub\Pulse\Repository;
@@ -36,7 +36,7 @@ abstract class AbstractRepository
      */
     private $denormalizer;
 
-    public function __construct(
+    final public function __construct(
         Client $client,
         Serializer\Normalizer\DenormalizerInterface $denormalizer,
         Flysystem\FilesystemInterface $filesystem

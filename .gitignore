@@ -1,4 +1,2 @@
-/.phpstan/
-/data/
+/.build/
 /vendor/
-/.php_cs.cache

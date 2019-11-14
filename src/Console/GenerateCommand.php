@@ -8,7 +8,7 @@ declare(strict_types=1);
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @link https://github.com/localheinz/github-pulse
+ * @see https://github.com/localheinz/github-pulse
  */
 
 namespace Localheinz\GitHub\Pulse\Console;
@@ -57,8 +57,8 @@ final class GenerateCommand extends Console\Command\Command
         Repository\OrganizationRepositoryInterface $organizationRepository,
         Repository\RepositoryRepositoryInterface $repositoryRepository,
         Repository\PullRequestRepositoryInterface $pullRequestRepository,
-        Stopwatch\Stopwatch $stopwatch = null,
-        \DateTimeZone $dateTimeZone = null
+        Stopwatch\Stopwatch $stopwatch,
+        \DateTimeZone $dateTimeZone
     ) {
         parent::__construct();
 
@@ -66,8 +66,8 @@ final class GenerateCommand extends Console\Command\Command
         $this->organizationRepository = $organizationRepository;
         $this->repositoryRepository = $repositoryRepository;
         $this->pullRequestRepository = $pullRequestRepository;
-        $this->stopwatch = $stopwatch ?: new Stopwatch\Stopwatch();
-        $this->dateTimeZone = $dateTimeZone ?: new \DateTimeZone('UTC');
+        $this->stopwatch = $stopwatch;
+        $this->dateTimeZone = $dateTimeZone;
     }
 
     protected function configure(): void
@@ -142,7 +142,7 @@ final class GenerateCommand extends Console\Command\Command
             ),
         ]);
 
-        /** @var string $authToken */
+        /** @var null|string $authToken */
         $authToken = $input->getOption('auth-token');
 
         if (null !== $authToken) {
