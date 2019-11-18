@@ -28,7 +28,7 @@ final class EventRecorderTest extends Framework\TestCase
 
     public function testImplementsEventRecorderInterface(): void
     {
-        $this->assertClassImplementsInterface(
+        self::assertClassImplementsInterface(
             Event\EventRecorderInterface::class,
             Event\EventRecorder::class
         );
@@ -124,7 +124,7 @@ final class EventRecorderTest extends Framework\TestCase
 
     public function testSortSortsEventsByTime(): void
     {
-        $faker = $this->faker();
+        $faker = self::faker();
 
         $times = \array_map(static function () use ($faker) {
             return $faker->dateTime->format('Y-m-d\TH:i:s\Z');

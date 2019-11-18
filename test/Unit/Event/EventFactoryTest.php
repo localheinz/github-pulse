@@ -31,7 +31,7 @@ final class EventFactoryTest extends Framework\TestCase
 
     public function testImplementsEventFactoryInterface(): void
     {
-        $this->assertClassImplementsInterface(
+        self::assertClassImplementsInterface(
             Event\EventFactoryInterface::class,
             Event\EventFactory::class
         );

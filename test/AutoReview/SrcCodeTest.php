@@ -28,7 +28,7 @@ final class SrcCodeTest extends Framework\TestCase
 
     public function testSrcClassesHaveUnitTests(): void
     {
-        $this->assertClassesHaveTests(
+        self::assertClassesHaveTests(
             __DIR__ . '/../../src',
             'Localheinz\\GitHub\\Pulse\\',
             'Localheinz\\GitHub\\Pulse\\Test\\Unit\\',
