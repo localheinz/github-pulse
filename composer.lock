@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ef0566dc34d557dd4c09b419e5697e1",
+    "content-hash": "17fc2dffc2965f3d0436f3395b8e47dc",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1753,16 +1753,16 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.1.8",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "10edb6c4b6f496a2ed40a788ebbd280b421985ae"
+                "reference": "bb0c302375ffeef60c31e72a4539611b7f787565"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/10edb6c4b6f496a2ed40a788ebbd280b421985ae",
-                "reference": "10edb6c4b6f496a2ed40a788ebbd280b421985ae",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/bb0c302375ffeef60c31e72a4539611b7f787565",
+                "reference": "bb0c302375ffeef60c31e72a4539611b7f787565",
                 "shasum": ""
             },
             "require": {
@@ -1778,7 +1778,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -1816,7 +1816,7 @@
                 "property path",
                 "reflection"
             ],
-            "time": "2018-11-26T12:16:25+00:00"
+            "time": "2019-08-26T08:26:39+00:00"
         },
         {
             "name": "symfony/property-info",
