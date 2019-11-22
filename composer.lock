@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ef0566dc34d557dd4c09b419e5697e1",
+    "content-hash": "b1fef34dccccf02bc948da28ace2de85",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1466,16 +1466,16 @@
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.3.8",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
-                "reference": "f97c69c132c08e31d291689d2d77bb0878094acb"
+                "reference": "98581481d9ddabe4db3a66e10202fe1fa08d791b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/inflector/zipball/f97c69c132c08e31d291689d2d77bb0878094acb",
-                "reference": "f97c69c132c08e31d291689d2d77bb0878094acb",
+                "url": "https://api.github.com/repos/symfony/inflector/zipball/98581481d9ddabe4db3a66e10202fe1fa08d791b",
+                "reference": "98581481d9ddabe4db3a66e10202fe1fa08d791b",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1485,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -1520,7 +1520,7 @@
                 "symfony",
                 "words"
             ],
-            "time": "2019-11-05T19:58:22+00:00"
+            "time": "2019-11-06T12:02:32+00:00"
         },
         {
             "name": "symfony/options-resolver",
@@ -1753,24 +1753,24 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.1.8",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "10edb6c4b6f496a2ed40a788ebbd280b421985ae"
+                "reference": "4df120cbe473d850eb59f75c341915955e45f25b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/10edb6c4b6f496a2ed40a788ebbd280b421985ae",
-                "reference": "10edb6c4b6f496a2ed40a788ebbd280b421985ae",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/4df120cbe473d850eb59f75c341915955e45f25b",
+                "reference": "4df120cbe473d850eb59f75c341915955e45f25b",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3",
-                "symfony/inflector": "~3.4|~4.0"
+                "symfony/inflector": "^3.4|^4.0|^5.0"
             },
             "require-dev": {
-                "symfony/cache": "~3.4|~4.0"
+                "symfony/cache": "^3.4|^4.0|^5.0"
             },
             "suggest": {
                 "psr/cache-implementation": "To cache access methods."
@@ -1778,7 +1778,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -1816,7 +1816,7 @@
                 "property path",
                 "reflection"
             ],
-            "time": "2018-11-26T12:16:25+00:00"
+            "time": "2019-10-12T00:35:04+00:00"
         },
         {
             "name": "symfony/property-info",
