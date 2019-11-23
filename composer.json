@@ -13,7 +13,7 @@
   "require": {
     "php": "^7.2",
     "guzzlehttp/guzzle": "^6.3.3",
-    "knplabs/github-api": "^2.2.0",
+    "knplabs/github-api": "^2.12.1",
     "league/flysystem": "^1.0.37",
     "php-http/guzzle6-adapter": "^1.1.1",
     "phpdocumentor/reflection-docblock": "^4.3.2",
