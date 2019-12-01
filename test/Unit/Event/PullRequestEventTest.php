@@ -29,7 +29,7 @@ final class PullRequestEventTest extends Framework\TestCase
 
     public function testImplementsPullRequestInterface(): void
     {
-        $this->assertClassImplementsInterface(
+        self::assertClassImplementsInterface(
             Event\PullRequestEventInterface::class,
             Event\PullRequestEvent::class
         );
@@ -46,7 +46,7 @@ final class PullRequestEventTest extends Framework\TestCase
 
     public function testTimeReturnsTimeWhenPullRequestWasCreated(): void
     {
-        $createdAt = $this->faker()->dateTime->format('Y-m-d\TH:i:s\Z');
+        $createdAt = self::faker()->dateTime->format('Y-m-d\TH:i:s\Z');
 
         $pullRequest = $this->createPullRequestMock();
 

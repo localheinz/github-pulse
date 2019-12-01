@@ -28,7 +28,7 @@ final class ResourceNotFoundExceptionTest extends Framework\TestCase
 
     public function testImplementsExceptionInterface(): void
     {
-        $this->assertClassImplementsInterface(
+        self::assertClassImplementsInterface(
             Exception\ExceptionInterface::class,
             Exception\ResourceNotFoundException::class
         );
@@ -36,7 +36,7 @@ final class ResourceNotFoundExceptionTest extends Framework\TestCase
 
     public function testExtendsRuntimeException(): void
     {
-        $this->assertClassExtends(
+        self::assertClassExtends(
             \RuntimeException::class,
             Exception\ResourceNotFoundException::class
         );
