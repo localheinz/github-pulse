@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Test\AutoReview;
 
+use Ergebnis\Test\Util\Helper;
 use Localheinz\GitHub\Pulse;
-use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**

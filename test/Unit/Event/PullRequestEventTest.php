@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Test\Unit\Event;
 
+use Ergebnis\Test\Util\Helper;
 use Localheinz\GitHub\Pulse\Event;
 use Localheinz\GitHub\Pulse\Resource;
-use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**
