@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Test\Unit\Event;
 
+use Ergebnis\Test\Util\Helper;
 use Localheinz\GitHub\Pulse\Event;
-use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Localheinz\GitHub\Pulse\Test\Unit\Exception;
 
+use Ergebnis\Test\Util\Helper;
 use Localheinz\GitHub\Pulse\Exception;
-use Localheinz\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**
