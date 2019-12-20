@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39e80b367b038f588dd7a6293ab32f51",
+    "content-hash": "06f284746a4c64fd6627bcbb011b0d32",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1456,7 +1456,7 @@
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.4.1",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
@@ -1810,7 +1810,7 @@
         },
         {
             "name": "symfony/property-info",
-            "version": "v4.4.1",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-info.git",
