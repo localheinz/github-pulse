@@ -22,7 +22,7 @@
     "symfony/property-access": "^4.4.0",
     "symfony/property-info": "^4.4.2",
     "symfony/serializer": "^4.4.2",
-    "symfony/stopwatch": "^4.4.1"
+    "symfony/stopwatch": "^4.4.2"
   },
   "require-dev": {
     "ergebnis/php-cs-fixer-config": "~1.1.2",
