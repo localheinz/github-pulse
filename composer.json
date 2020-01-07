@@ -29,7 +29,7 @@
     "ergebnis/test-util": "~0.9.1",
     "infection/infection": "~0.13.6",
     "localheinz/composer-normalize": "^2.0.0",
-    "localheinz/phpstan-rules": "~0.13.0",
+    "localheinz/phpstan-rules": "~0.14.2",
     "phpstan/phpstan": "~0.11.19",
     "phpstan/phpstan-deprecation-rules": "~0.11.2",
     "phpstan/phpstan-phpunit": "~0.11.2",
