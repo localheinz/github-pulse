@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="3.8.1@8e54e3aa060fc490d86d0e2abbf62750516d40fd">
+  <file src="src/Console/GenerateCommand.php">
+    <MissingClosureParamType occurrences="4">
+      <code>$a</code>
+      <code>$b</code>
+      <code>$user</code>
+      <code>$data</code>
+    </MissingClosureParamType>
+    <PossiblyNullOperand occurrences="1">
+      <code>$pullRequest-&gt;commits()</code>
+    </PossiblyNullOperand>
+  </file>
+  <file src="src/Repository/AbstractRepository.php">
+    <MissingReturnType occurrences="1">
+      <code>denormalize</code>
+    </MissingReturnType>
+  </file>
+  <file src="src/Repository/PullRequestRepository.php">
+    <MissingClosureReturnType occurrences="1">
+      <code>function (array $data) {</code>
+    </MissingClosureReturnType>
+  </file>
+  <file src="src/Repository/RepositoryRepository.php">
+    <MissingClosureReturnType occurrences="1">
+      <code>function (array $data) {</code>
+    </MissingClosureReturnType>
+  </file>
+  <file src="src/Resource/Organization.php">
+    <MissingConstructor occurrences="1">
+      <code>$login</code>
+    </MissingConstructor>
+  </file>
+  <file src="src/Resource/PullRequest.php">
+    <MissingConstructor occurrences="1">
+      <code>$createdAt</code>
+    </MissingConstructor>
+  </file>
+  <file src="src/Resource/Repository.php">
+    <MissingConstructor occurrences="1">
+      <code>$id</code>
+    </MissingConstructor>
+  </file>
+  <file src="src/Resource/User.php">
+    <MissingConstructor occurrences="1">
+      <code>$login</code>
+    </MissingConstructor>
+  </file>
+  <file src="test/Unit/Event/EventFactoryTest.php">
+    <PossiblyInvalidArgument occurrences="1">
+      <code>$pullRequest</code>
+    </PossiblyInvalidArgument>
+    <UndefinedDocblockClass occurrences="1">
+      <code>\PHPUnit_Framework_MockObject_MockObject|Resource\PullRequestInterface</code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="test/Unit/Event/EventRecorderTest.php">
+    <InvalidScalarArgument occurrences="2">
+      <code>$times</code>
+    </InvalidScalarArgument>
+    <PossiblyInvalidArgument occurrences="9">
+      <code>$event</code>
+      <code>$events</code>
+      <code>$event</code>
+      <code>$event</code>
+      <code>$event</code>
+      <code>$events</code>
+      <code>$events</code>
+      <code>$pastEvent</code>
+      <code>$futureEvent</code>
+    </PossiblyInvalidArgument>
+    <TooManyArguments occurrences="1"/>
+    <UndefinedDocblockClass occurrences="3">
+      <code>$event</code>
+      <code>Event\EventInterface|\PHPUnit_Framework_MockObject_MockObject</code>
+      <code>Event\EventInterface|\PHPUnit_Framework_MockObject_MockObject</code>
+    </UndefinedDocblockClass>
+  </file>
+  <file src="test/Unit/Event/PullRequestEventTest.php">
+    <PossiblyInvalidArgument occurrences="1">
+      <code>$pullRequest</code>
+    </PossiblyInvalidArgument>
+    <UndefinedDocblockClass occurrences="2">
+      <code>$pullRequest</code>
+      <code>\PHPUnit_Framework_MockObject_MockObject|Resource\PullRequestInterface</code>
+    </UndefinedDocblockClass>
+  </file>
+</files>
