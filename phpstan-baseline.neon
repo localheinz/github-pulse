@@ -1,0 +1,122 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Anonymous function should have native return typehint \"string\"\\.$#"
+			count: 1
+			path: src/Console/GenerateCommand.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"int\"\\.$#"
+			count: 1
+			path: src/Console/GenerateCommand.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"array\"\\.$#"
+			count: 1
+			path: src/Console/GenerateCommand.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"int\"\\.$#"
+			count: 1
+			path: src/Event/EventRecorder.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Repository\\\\AbstractRepository\\:\\:denormalize\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Repository/AbstractRepository.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"int\"\\.$#"
+			count: 1
+			path: src/Repository/PullRequestRepository.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"int\"\\.$#"
+			count: 1
+			path: src/Repository/RepositoryRepository.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequest\\:\\:commits\\(\\) has a nullable return type declaration\\.$#"
+			count: 1
+			path: src/Resource/PullRequest.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequest\\:\\:closedAt\\(\\) has a nullable return type declaration\\.$#"
+			count: 1
+			path: src/Resource/PullRequest.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequest\\:\\:mergedAt\\(\\) has a nullable return type declaration\\.$#"
+			count: 1
+			path: src/Resource/PullRequest.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface\\:\\:commits\\(\\) has a nullable return type declaration\\.$#"
+			count: 1
+			path: src/Resource/PullRequestInterface.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface\\:\\:closedAt\\(\\) has a nullable return type declaration\\.$#"
+			count: 1
+			path: src/Resource/PullRequestInterface.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface\\:\\:mergedAt\\(\\) has a nullable return type declaration\\.$#"
+			count: 1
+			path: src/Resource/PullRequestInterface.php
+
+		-
+			message: "#^Return typehint of method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\EventFactoryTest\\:\\:createPullRequestMock\\(\\) has invalid type PHPUnit_Framework_MockObject_MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/EventFactoryTest.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\EventFactoryTest\\:\\:createPullRequestMock\\(\\) should return Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface&PHPUnit_Framework_MockObject_MockObject but returns Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface&PHPUnit\\\\Framework\\\\MockObject\\\\MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/EventFactoryTest.php
+
+		-
+			message: "#^Call to method expects\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockObject\\.$#"
+			count: 2
+			path: test/Unit/Event/EventRecorderTest.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"string\"\\.$#"
+			count: 1
+			path: test/Unit/Event/EventRecorderTest.php
+
+		-
+			message: "#^Anonymous function should have native return typehint \"bool\"\\.$#"
+			count: 2
+			path: test/Unit/Event/EventRecorderTest.php
+
+		-
+			message: "#^Return typehint of method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\EventRecorderTest\\:\\:createEventMock\\(\\) has invalid type PHPUnit_Framework_MockObject_MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/EventRecorderTest.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\EventRecorderTest\\:\\:createEventMock\\(\\) should return Localheinz\\\\GitHub\\\\Pulse\\\\Event\\\\EventInterface&PHPUnit_Framework_MockObject_MockObject but returns Localheinz\\\\GitHub\\\\Pulse\\\\Event\\\\EventInterface&PHPUnit\\\\Framework\\\\MockObject\\\\MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/EventRecorderTest.php
+
+		-
+			message: "#^Return typehint of method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\EventRecorderTest\\:\\:createEventSpy\\(\\) has invalid type PHPUnit_Framework_MockObject_MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/EventRecorderTest.php
+
+		-
+			message: "#^Call to method expects\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/PullRequestEventTest.php
+
+		-
+			message: "#^Return typehint of method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\PullRequestEventTest\\:\\:createPullRequestMock\\(\\) has invalid type PHPUnit_Framework_MockObject_MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/PullRequestEventTest.php
+
+		-
+			message: "#^Method Localheinz\\\\GitHub\\\\Pulse\\\\Test\\\\Unit\\\\Event\\\\PullRequestEventTest\\:\\:createPullRequestMock\\(\\) should return Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface&PHPUnit_Framework_MockObject_MockObject but returns Localheinz\\\\GitHub\\\\Pulse\\\\Resource\\\\PullRequestInterface&PHPUnit\\\\Framework\\\\MockObject\\\\MockObject\\.$#"
+			count: 1
+			path: test/Unit/Event/PullRequestEventTest.php
+

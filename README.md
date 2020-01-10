@@ -1,7 +1,9 @@
-# github-pulse
+# php-library-template
 
-[![CI Status](https://github.com/localheinz/github-pulse/workflows/Continuous%20Integration/badge.svg)](https://github.com/localheinz/github-pulse/actions)
-[![codecov](https://codecov.io/gh/localheinz/github-pulse/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/github-pulse)
+[![Continuous Deployment](https://github.com//workflows/Continuous%20Deployment/badge.svg)](https://github.com/localheinz/github-pulse/actions)
+[![Continuous Integration](https://github.com/localheinz/github-pulse/workflows/Continuous%20Integration/badge.svg)](https://github.com/localheinz/github-pulse/actions)
+[![Code Coverage](https://codecov.io/gh/localheinz/github-pulse/branch/master/graph/badge.svg)](https://codecov.io/gh/localheinz/github-pulse)
+[![Type Coverage](https://shepherd.dev/github/localheinz/github-pulse/coverage.svg)](https://shepherd.dev/github/localheinz/github-pulse)
 [![Latest Stable Version](https://poser.pugx.org/localheinz/github-pulse/v/stable)](https://packagist.org/packages/localheinz/github-pulse)
 [![Total Downloads](https://poser.pugx.org/localheinz/github-pulse/downloads)](https://packagist.org/packages/localheinz/github-pulse)
 

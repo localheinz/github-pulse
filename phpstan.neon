@@ -1,25 +1,15 @@
 includes:
-	- vendor/localheinz/phpstan-rules/rules.neon
-	- vendor/phpstan/phpstan-deprecation-rules/rules.neon
-	- vendor/phpstan/phpstan-phpunit/extension.neon
-	- vendor/phpstan/phpstan-strict-rules/rules.neon
-	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
-	- vendor/phpstan/phpstan/conf/config.levelmax.neon
+	- phpstan-baseline.neon
 
 parameters:
-	classesAllowedToBeExtended:
-		- Localheinz\GitHub\Pulse\Repository\AbstractRepository
-		- RuntimeException
-		- Symfony\Component\Console\Command\Command
-	ignoreErrors:
-		- '#Method Localheinz\\GitHub\\Pulse\\Repository\\AbstractRepository::denormalize\(\) has no return typehint specified\.#'
-		- '#Method Localheinz\\GitHub\\Pulse\\Resource\\PullRequest::closedAt\(\) has a nullable return type declaration\.#'
-		- '#Method Localheinz\\GitHub\\Pulse\\Resource\\PullRequest::commits\(\) has a nullable return type declaration\.#'
-		- '#Method Localheinz\\GitHub\\Pulse\\Resource\\PullRequest::mergedAt\(\) has a nullable return type declaration\.#'
-		- '#Method Localheinz\\GitHub\\Pulse\\Resource\\PullRequestInterface::closedAt\(\) has a nullable return type declaration\.#'
-		- '#Method Localheinz\\GitHub\\Pulse\\Resource\\PullRequestInterface::commits\(\) has a nullable return type declaration\.#'
-		- '#Method Localheinz\\GitHub\\Pulse\\Resource\\PullRequestInterface::mergedAt\(\) has a nullable return type declaration\.#'
+	checkMissingIterableValueType: false
+	ergebnis:
+		classesAllowedToBeExtended:
+			- Localheinz\GitHub\Pulse\Repository\AbstractRepository
+			- RuntimeException
+			- Symfony\Component\Console\Command\Command
 	inferPrivatePropertyTypeFromConstructor: true
+	level: max
 	paths:
 		- src
 		- test

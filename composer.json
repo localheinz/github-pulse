@@ -12,6 +12,7 @@
   ],
   "require": {
     "php": "^7.2",
+    "ext-json": "*",
     "guzzlehttp/guzzle": "^6.5.2",
     "knplabs/github-api": "^2.2.0",
     "league/flysystem": "^1.0.63",
@@ -25,18 +26,24 @@
     "symfony/stopwatch": "^4.4.2"
   },
   "require-dev": {
-    "ergebnis/php-cs-fixer-config": "~1.1.2",
+    "ergebnis/composer-normalize": "^2.0.0",
+    "ergebnis/php-cs-fixer-config": "^1.1.0",
+    "ergebnis/phpstan-rules": "~0.14.2",
     "ergebnis/test-util": "~0.9.1",
     "infection/infection": "~0.13.6",
-    "localheinz/composer-normalize": "^2.0.0",
-    "localheinz/phpstan-rules": "~0.13.0",
-    "phpstan/phpstan": "~0.11.19",
-    "phpstan/phpstan-deprecation-rules": "~0.11.2",
-    "phpstan/phpstan-phpunit": "~0.11.2",
-    "phpstan/phpstan-strict-rules": "~0.11.1",
-    "phpunit/phpunit": "^7.5.17"
+    "jangregor/phpstan-prophecy": "~0.6.0",
+    "phpstan/extension-installer": "^1.0.3",
+    "phpstan/phpstan-deprecation-rules": "~0.12.0",
+    "phpstan/phpstan-phpunit": "~0.12.5",
+    "phpstan/phpstan-strict-rules": "~0.12.0",
+    "phpunit/phpunit": "^8.5.2",
+    "psalm/plugin-phpunit": "~0.8.0",
+    "vimeo/psalm": "^3.8.1"
   },
   "config": {
+    "platform": {
+      "php": "7.2.25"
+    },
     "preferred-install": "dist",
     "sort-packages": true
   },

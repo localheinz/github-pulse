@@ -3,18 +3,14 @@
 version: 1
 
 update_configs:
-  - default_assignees:
-      - "localheinz"
-    default_reviewers:
-      - "localheinz"
-    directory: "/"
-    package_manager: "github_actions"
-    update_schedule: "daily"
-
-  - default_assignees:
-      - "localheinz"
-    default_reviewers:
-      - "localheinz"
+  - automerged_updates:
+      - match:
+          dependency_type: "development"
+    commit_message:
+      include_scope: true
+      prefix: "Build"
+    default_labels:
+      - "dependency"
     directory: "/"
     package_manager: "php:composer"
     update_schedule: "live"
