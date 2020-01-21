@@ -18,7 +18,7 @@
     "league/flysystem": "^1.0.63",
     "php-http/guzzle6-adapter": "^1.1.1",
     "phpdocumentor/reflection-docblock": "^4.3.4",
-    "symfony/cache": "^4.4.2",
+    "symfony/cache": "^5.0.2",
     "symfony/console": "^4.4.2",
     "symfony/property-access": "^5.0.2",
     "symfony/property-info": "^5.0.2",
