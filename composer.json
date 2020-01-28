@@ -20,7 +20,7 @@
     "phpdocumentor/reflection-docblock": "^4.3.4",
     "symfony/cache": "^4.4.2",
     "symfony/console": "^4.4.2",
-    "symfony/property-access": "^5.0.2",
+    "symfony/property-access": "^5.0.3",
     "symfony/property-info": "^5.0.2",
     "symfony/serializer": "^4.4.2",
     "symfony/stopwatch": "^5.0.2"
