@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d4bf43bafd49e1c3c7dafac19df9f00",
+    "content-hash": "c8cfa335463c3e541ce6d58f579f05a1",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -3351,16 +3351,16 @@
         },
         {
             "name": "jangregor/phpstan-prophecy",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jan0707/phpstan-prophecy.git",
-                "reference": "542c8ed7228af772562fb0f370d15ec73e3bdecf"
+                "reference": "ecd367a2551da3d4921bbd9ae8eefbe2fc04eb8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/542c8ed7228af772562fb0f370d15ec73e3bdecf",
-                "reference": "542c8ed7228af772562fb0f370d15ec73e3bdecf",
+                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/ecd367a2551da3d4921bbd9ae8eefbe2fc04eb8f",
+                "reference": "ecd367a2551da3d4921bbd9ae8eefbe2fc04eb8f",
                 "shasum": ""
             },
             "require": {
@@ -3373,6 +3373,7 @@
             },
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.1.1",
+                "ergebnis/license": "~0.1.0",
                 "ergebnis/php-cs-fixer-config": "~1.1.2",
                 "phpspec/prophecy": "^1.7",
                 "phpunit/phpunit": "^6.0 || ^7.0"
@@ -3406,7 +3407,7 @@
                 }
             ],
             "description": "Provides a phpstan/phpstan extension for phpspec/prophecy",
-            "time": "2019-12-27T23:57:21+00:00"
+            "time": "2020-02-05T16:38:06+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -4077,16 +4078,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.8",
+            "version": "0.12.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "62a552602b7586d82826231f2fd4cbfe39fe0b1d"
+                "reference": "297cb2458a96ea96d5e9d6ef38f1b7305c071f32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/62a552602b7586d82826231f2fd4cbfe39fe0b1d",
-                "reference": "62a552602b7586d82826231f2fd4cbfe39fe0b1d",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/297cb2458a96ea96d5e9d6ef38f1b7305c071f32",
+                "reference": "297cb2458a96ea96d5e9d6ef38f1b7305c071f32",
                 "shasum": ""
             },
             "require": {
@@ -4112,7 +4113,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-01-26T23:36:48+00:00"
+            "time": "2020-02-04T22:30:27+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
