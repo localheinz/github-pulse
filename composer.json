@@ -14,7 +14,7 @@
     "php": "^7.2",
     "ext-json": "*",
     "guzzlehttp/guzzle": "^6.5.2",
-    "knplabs/github-api": "^2.2.0",
+    "knplabs/github-api": "^2.13.0",
     "league/flysystem": "^1.0.63",
     "php-http/guzzle6-adapter": "^1.1.1",
     "phpdocumentor/reflection-docblock": "^4.3.4",
