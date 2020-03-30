@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc701abd0681c893b9ffa20ff041fe3a",
+    "content-hash": "df3457120a5ae8ab7bdf9529a351c34f",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2028,16 +2028,16 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v5.0.2",
+            "version": "v5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "d410282956706e0b08681a5527447a8e6b6f421e"
+                "reference": "6caf14c561c844af0f02e4a9a0600399aa79176e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/d410282956706e0b08681a5527447a8e6b6f421e",
-                "reference": "d410282956706e0b08681a5527447a8e6b6f421e",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/6caf14c561c844af0f02e4a9a0600399aa79176e",
+                "reference": "6caf14c561c844af0f02e4a9a0600399aa79176e",
                 "shasum": ""
             },
             "require": {
@@ -2074,7 +2074,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-18T17:27:11+00:00"
+            "time": "2020-03-18T08:00:37+00:00"
         },
         {
             "name": "symfony/var-exporter",
